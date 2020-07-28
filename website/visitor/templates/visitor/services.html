@@ -1,0 +1,37 @@
+{% extends "v_base.html" %}
+{% load static %}
+
+{% block title  %} AFS Services {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'visitor/css/services.css' %}">
+{% endblock%}
+{% block pagename %}Our Services{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="container marketing">
+        <div class="col-12">
+            <div class="row">
+                {% for service in services %}
+                    <div class="col-lg-3 service">
+                        <a class="service-link text-center" href="{% url 'visitor:detail' service.rank %}">
+                            <span class="service-icon">
+                                <i class="fas fa-{{ service.icon }}"></i>
+                            </span>
+
+                            <h5 class="service-name">{{ service.name }}</h5>
+                        </a>
+                    </div><!-- /.col-lg-3 -->
+                    {% if forloop.counter|divisibleby:4  %}
+            </div> <!-- /.row-->
+            <div class="row">
+                    {% endif %}
+              {% endfor %}
+            </div> <!-- /.row -->
+        </div><!--/.col-12 -->
+    </div>    <!-- /.container marketing -->
+</div> <!--/.container -->
+
+<hr>
+
+{% endblock %}

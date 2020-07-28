@@ -1,0 +1,166 @@
+/* HOMEPAGE css*/
+
+/* CAROUSEL styling */
+
+/* CONTACT card styling */
+.contact-card {
+    height: auto;
+    position: relative;
+    text-align: center;
+    border: 3px solid #ea2227;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 15px;
+}
+
+/* SERVICES styling */
+.homepage-icon {
+    padding:20px;
+    font-size: 80px;
+    color: #ea2227;
+    text-align: center;
+}
+
+/* CAROUSEL */
+
+.carousel-caption {
+    position:absolute;
+    top:15px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: black;
+}
+.carousel-indicators .active {
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    background-color: #d12525;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 2rem;
+  border: 1px solid #ea2227;
+}
+.carousel-inner {
+    height:375px;
+}
+
+.carousel-item svg {
+    height: 500px;
+    padding-top:-20px;
+    margin-top:-20px;
+}
+
+#redirect {
+    margin-top:50px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+#second-carousel-title {
+    color:#ea2227;
+    padding: 5px;
+    margin-top:10px;
+    font-size: 35px;
+}
+
+#second-carousel-text {
+    font-size: 25px;
+    padding: 5px;
+    margin-top:40px;
+    color:black;
+    font-weight;
+}
+#redirect2{
+    margin-top:30px;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 0px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 29px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 29px;
+  color: black;
+}
+#firstrow {
+    background-color:#e6f8ff;
+}
+#secondrow {
+    background-color:#f2fcff;
+}
+#thirdrow {
+    background-color:#e6f9ff;
+}
+
+#fourthrow {
+    background-color:#d9f4ff;
+}
+.homeinfo {
+    padding-bottom:30px;
+    width:100%;
+}
+
+/* Featurettes
+------------------------- */
+.myheading {
+    position: absolute;
+    top: 100px;
+}
+
+.featurette-divider {
+    margin-bottom: 1rem 0; /* Space out the Bootstrap <hr> more */
+    margin-top:0px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+

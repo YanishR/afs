@@ -1,0 +1,41 @@
+/* SERVICES styling */
+.service {
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin-bottom:10px;
+    margin-top:10px;
+    text-align: center;
+}
+.service-icon {
+    font-size: 75px;
+    color: #ea2227;
+}
+.service-name {
+    font-family:
+    padding-top:10px;
+    margin-top:10px;
+    text-align: center;
+}
+.service-link:link {
+  color: black; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+.service-link:visited {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: #ea2227;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.service-link:active {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}

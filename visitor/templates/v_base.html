@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Yanish">
+        <meta name="generator" content="Jekyll v4.0.1">
+        <title>{% block title%} {% endblock %}</title>
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'visitor/css/main.css' %}">
+        {% block stylesheets %} {% endblock %}
+        <link rel="icon" href="{% static 'visitor/afsicon.png'%}">
+        <script src="https://kit.fontawesome.com/3011edc262.js" crossorigin="anonymous"></script>
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+        <!-- Custom styles for this template -->
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top" >
+                <a class="navbar-brand" href="{% url 'visitor:index' %}">AFS</a>
+                    <button class="navbar-toggler" type="button" 
+                    data-toggle="collapse" data-target="#navbarCollapse" 
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item {% if request.path == "/"%} active{% endif %}">
+                        <a class="nav-link" href="{% url 'visitor:index' %}">Home 
+                            {% if request.path  == "/" %}<span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
+                    <li class="nav-item {% if 'about' in request.path %} active{% endif %}">
+                        <a class="nav-link" href="{% url 'visitor:about' %}">About Us
+                            {% if 'about' in request.path %}<span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
+                    <li class="nav-item{% if 'services' in request.path %} active{% endif %}">
+                        <a class="nav-link" href="{% url 'visitor:services' %}">Our Services
+                            {% if 'services' in request.path %}<span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
+                    <li class="nav-item {% if 'contact' in request.path %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'visitor:contact'%}">Contact Us
+                            {% if 'contact' in request.path %}<span class='sr-only'>(current)</span>{% endif %}</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item {% if 'login' in request.path %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'emp:login' %}">Employee Login 
+                            {% if 'login' in request.path%}<span class="sr-only">(current)</span>{% endif %}</a>
+                        </li>
+                </ul>
+            <!--<form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+
+        </div>
+      </nav>
+    </header>
+        {% block carousel %}
+        {% endblock %}
+        <main>
+            {% if request.path != "/" %}
+                <hr>
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-1">
+                                {%if "detail" in request.path %}
+                                <a class="back-button" href={% url 'visitor:services' %}>
+                                    <span class="back-button-icon">
+                                        <i class="fas fa-arrow-left"></i><p>Back</p></span>
+                                </a>
+                                {% endif %}
+                            </div>
+                            <div class="col-11">
+                                <h2 class="text-center">{% block pagename %}{% endblock %}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            {% endif  %}
+            {% block content%}
+                
+            {% endblock%}
+
+            <footer class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2016-2020 AFS Group, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer>
+        </main>
+        
+    </body>
+</html>

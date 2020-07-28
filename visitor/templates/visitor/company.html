@@ -1,0 +1,71 @@
+{% extends "v_base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'visitor/css/company.css' %}">
+{% endblock%}
+
+{% block pagename %}About Us{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row about">
+    <div class="col-3">
+        {% include 'visitor/contact-card.html' %}
+    </div>
+    <div class="col-1">
+    </div>
+    <div class="col-8 about">
+    <p class="info">Abhasa Financial Services originated from the experience 
+    and know-how of professionals in the field of finance and technology. 
+    Based in Ébène, the new financial hub of Mauritius, we act as a strategic 
+    financial business partner. We focus on client solutions with a view 
+    of meeting your business requirements: from the simplest to the most complex ones.</p> 
+    <div class="sme">
+        <p> We are a one-stop-shop for all SME in terms of accountancy, 
+        taxation and finance requirements. We offer a full scope of 
+        services and comprehensive support on all strategic and 
+        operational aspects of your business.</p>
+    </div>
+    <div class="row about">
+    <div class="col-6 about">
+        <h3 class="info-header">Mission Statement</h3> 
+        <p class="info">Our mission in today’s rapidly changing 
+        business environment is focused mainly in delivering 
+        the highest business standards to our clients and to 
+        add value to your needs in various ways to meet the 
+        Global challenges of tomorrow. We aim at bringing value 
+        to our clients and believe firmly in long-term relationships 
+        and take personal ownership in helping find answers to questions 
+        and provide real financial and non-financial solutions for 
+        our highly esteemed clients.
+        </p>
+    </div>
+    <div class="col-6 about">
+        <h3 class="info-header">Why Us?</h3> 
+        <ul>
+            <li> Abhasa Financial Services is an authorised services 
+                provider registered with the Mauritius Institute of 
+                Professional Accountants, the regulatory body of the 
+                Accounting Profession in Mauritius. </li>
+            <li>You can fully rely on us for all your strategic and operational 
+                aspects of your business, whether you’re an SME or a start-up.</li>
+            <li>Our directors have a thorough understanding of the market 
+                requirements will provide you with expert assistance.</li>
+            <li>We listen attentively to our clients to understand the demands 
+                they face and respond with effective, cost-efficient, and strategic solutions.</li>
+            <li> We deliver value for money.</li>
+            <li>We believe that better customer service and satisfaction 
+                comes from better and close relationships with our customers.</li>
+            <li>We do not overpromise so as to be able to manage client 
+                expectations for a more trusting and successful relationship.</li>
+        </ul>
+
+    </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

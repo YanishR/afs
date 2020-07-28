@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'emp/style.css' %}">
+
+{% if employees %}
+
+    <ul>
+    {% for employee in employees %}
+    <li> {{ employee.user.first_name}}, {{ employee.user.last_name }} born on the {{ employee.dob }}
+        works as a {{ employee.job_title}} in our company</a></li>
+    {% endfor %}
+    </ul>
+    <p>These are all the employees in the company</p>
+
+{% else %}
+
+    <p>No Employees in database.</p>
+
+{% endif %}

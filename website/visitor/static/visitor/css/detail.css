@@ -1,0 +1,13 @@
+.contact-card {
+    height: auto;
+    position: relative;
+    text-align: center;
+    border: 3px solid #ea2227;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 25px;
+}
+.detail {
+    list-style-type:none;
+}
+

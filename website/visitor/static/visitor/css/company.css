@@ -1,0 +1,31 @@
+.contact-card {
+    height: auto;
+    position: relative;
+    text-align: center;
+    border: 3px solid #ea2227;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 15px;
+}
+
+.info {
+    color:black;
+    text-align: justify;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+    font-family: palatino;
+}
+.info-header {
+    color: #ea2227;
+    text-align: center;
+}
+.sme {
+    background-color: #d8dde6;
+    padding: 10px;
+    padding-top:15px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border: 0.5px solid #b6b9bf;
+    border-radius: 5px;
+    font-style: italic;
+}

@@ -1,0 +1,13 @@
+{% extends "base_dash.html" %}
+{% block title %}
+Edit Profile 
+{% endblock %}
+{% block content %}
+<form method="post" action="{% url 'accounts:edit' %}">
+{% csrf_token %}
+    <ul>
+    {{ form.as_ul }}
+    </ul>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

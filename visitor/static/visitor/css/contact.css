@@ -1,0 +1,16 @@
+/* CONTACT-US page css*/
+
+.contact-card {
+    height: auto;
+    position: relative;
+    text-align: center;
+    border: 3px solid #ea2227;
+    padding: 20px;
+    margin-top: 25%;
+    border-radius: 25px;
+}
+
+.contact-form {
+    padding-top:20px;
+    margin-top:20px;
+}

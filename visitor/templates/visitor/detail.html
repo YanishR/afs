@@ -1,0 +1,40 @@
+{% extends "v_base.html" %}
+{% load static %}
+
+{% block title %}AFS {{ service.name }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'visitor/css/detail.css' %}">
+{% endblock%}
+
+{% block pagename %}{{ service.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            {% include 'visitor/contact-card.html' %}
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-8">
+            <p> {{ service.long_description }} </p>
+            {% if details %}
+                <div class="row about">
+                    <h4> The {{ service.name }} we provide cover the following:</h4>
+                    <ul class="detail">
+                        {% for detail in details %}
+                        <li class="detail"> 
+                            <i class="detail-arrow fas fa-arrow-right"></i> {{ detail.description }}
+                        </li> 
+                        {%  endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+</div>
+
+<hr>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base_dash.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content%}
+<h1> Profile </h1>
+
+
+<ul>
+    <li> First name: {{ profile.user.first_name }} </li>
+    <li> Last name: {{ profile.user.last_name }} </li>
+    <li> Dob : {{ profile.user.employee.dob }} </li>
+    <li> Sex : {{ profile.user.employee.sex }} </li>
+    <li> Middle Name : {{profile.user.employee.middle_name }} </li>
+</ul>
+
+<a href="{% url 'accounts:edit' %}">Edit Profile</a>
+
+{% endblock%}

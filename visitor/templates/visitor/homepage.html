@@ -1,0 +1,197 @@
+{% extends "v_base.html" %}
+{% load static %}
+
+{% block title %}
+    Abhasa Financial Services 
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'visitor/css/homepage.css' %}">
+{% endblock%}
+
+{% block carousel %}
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg 
+            class="bd-placeholder-img" width="100%" 
+            height="100%" 
+            xmlns="http://www.w3.org/2000/svg" 
+            preserveAspectRatio="xMidYMid slice" 
+            focusable="false" role="img">
+            <img src="{% static 'visitor/background.jpeg' %}" alt="AFS"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-center">
+              <h1> Abhasa Financial Services</h1>
+              <hr class="title-hr">
+              <h3> Experienced Finance & Technology Professionals</h3>
+              <p><a class="btn btn-lg btn-danger" href="{% url 'visitor:about' %}" role="button" id="redirect">
+                  Learn More</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" 
+            xmlns="http://www.w3.org/2000/svg" 
+            preserveAspectRatio="xMidYMid slice" 
+            focusable="false" role="img">
+            <img src="{% static 'visitor/background2.jpg' %}" alt="background2"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h3 id="second-carousel-title"> Find out how we may be of service to you.</h3>
+            <p id="second-carousel-text"> Book an appointment today.</p>
+            <p><a class="btn btn-lg btn-danger" href="{% url 'visitor:contact' %}" role="button" id="redirect2">
+                Contact Us</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" 
+            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <img src={% static 'visitor/background3.jpg' %}/></svg>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, 
+            egestas eget quam. Donec id elit non mi porta gravida at 
+            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-secondary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="row homeinfo" id="first">
+    <div class="container">
+        <div class="row">
+            <div class=col-8 >
+                <div class="container marketing">
+                    <!-- Three columns of text below the carousel -->
+                    <h2 class="text-center">Our Services</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <span class="homepage-icon">
+                                <i class="fas fa-calculator"></i>
+                            </span>
+                            <h5 class="homepage-services">Accountancy Services</h5>
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-lg-4">
+                          <span class="homepage-icon">
+                              <i class="fas fa-percentage"></i>
+                          </span>
+                        <h5 class="homepage-services">Tax Services</h5>
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-lg-4">
+                            <span class="homepage-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </span>
+                            <h5 class="homepage-services">Corporate Finance</h5>
+                        </div><!-- /.col-lg-4 -->
+                        <a role="button" class="btn btn-outline-danger btn-lg btn-block" 
+                            href="{% url 'visitor:services'%}">
+                          <i class="far fa-plus-square"></i> All Services  </a>
+                    </div> <!-- /.row-->
+                </div> <!-- /.container marketing -->
+            </div> <!-- /.col-8 -->
+
+            <div class="col-1">
+            </div><!-- /. col-1 -->
+            <div class="col-3">
+                {% include 'visitor/contact-card.html'%}
+            </div> <!-- /.col-3 -->
+        </div> <!--/.row-->
+    </div><!-- /.container-->
+</div><!-- /.row -->
+
+    <!-- START THE FEATURETTES -->
+
+<div class="row homeinfo" id="secondrow">
+    <div class="container">
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-12">
+              <h2 class="featurette-heading">Our Firm.</h2>
+              <p class="lead"> {{ home.text.our_firm }}</p>
+          </div>
+        </div><!--/.row featurette -->
+    </div> <!-- /.container -->
+</div> <!--/.row -->
+
+<div class="row homeinfo" id="thirdrow">
+    <div class="container">
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">About Us</span></h2>
+            <p class="lead"> {{ home.text.about_us}} </p>
+          </div> <!--/.col-md-7 -->
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg 
+                featurette-image img-fluid mx-auto" width="500" height="500" 
+                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
+                focusable="false" role="img" aria-label="Placeholder: 500x500">
+                <title>Placeholder</title>
+                <image width=100% height=100% href={% static 'visitor/about.jpg' %}>
+                <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          </div> <!--/.col-md-5 -->
+        </div> <!-- /.row featurette -->
+    </div> <!--/.container -->
+</div> <!--/.row -->
+
+<div class="row homeinfo" id="fourthrow">
+    <div class="container">
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Director's Resume</h2>
+                <p class="lead">{{ home.text.resume }}</p>
+            </div> <!--/.col-md-7 order-md-2 -->
+
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg 
+                    featurette-image img-fluid mx-auto" width="500" height="500" 
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
+                    focusable="false" role="img" aria-label="Placeholder: 500x500">
+                    <title>Placeholder</title>
+                    <image width="100%" height="100%" href={% static 'visitor/director.jpg' %}/></svg>
+                    </svg>
+            </div> <!--/.col-md-5 order-md-1 -->
+        </div> <!--/.row featurette -->
+        <hr class="featurette-divider">
+    </div> <!-- /.container -->
+</div> <!-- /.row -->
+    <!-- /END THE FEATURETTES -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+      <script>window.jQuery || 
+          document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+          <script src="{% static 'visitor/bootstrap.bundle.js' %}"></script>
+{% endblock %}
